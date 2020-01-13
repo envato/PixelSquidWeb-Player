@@ -3,12 +3,13 @@
   "files": [
     "dist"
   ],
-  "version": "2.5.2",
+  "version": "3.0.0",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --hot --host 0.0.0.0"
   },
-  "main": "./dist/pixelsquid-atlas.js",
+  "main": "./dist/pixelsquid-atlas-server.js",
+  "browser": "./dist/pixelsquid-atlas.js",
   "license": "",
   "description": "PixelSquid Atlas Player",
   "repository": "https://github.com/turbosquid/PixelSquidWeb-Player",

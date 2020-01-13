@@ -56,8 +56,16 @@ const common = {
   ]
 };
 
-if (TARGET === 'build' || !TARGET) {
-  module.exports = merge(common, {});
+if (TARGET === "build" || !TARGET) {
+  module.exports = [
+    merge(common, {}),
+    merge(common, {
+      entry: "./src/atlas_main_server.js",
+      output: {
+        filename: "pixelsquid-atlas-server.js"
+      }
+    })
+  ]
 }
 
 if (TARGET === 'start') {
