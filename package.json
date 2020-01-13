@@ -1,5 +1,5 @@
 {
-  "name": "atlas2",
+  "name": "@envato/atlas2",
   "version": "2.5.2",
   "scripts": {
     "build": "webpack",
