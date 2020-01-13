@@ -43,24 +43,23 @@ const common = {
     ]
   },
   externals: {
-    'jquery': 'jQuery'
+    jquery: "jQuery"
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: [".js"],
     alias: {
-      jquery: 'src/externals/jquery-1.12.3.min'
+      jquery: "src/externals/jquery-1.12.3.min"
     }
   },
-  plugins: [
-    new StringReplacementPlugin()
-  ]
-};
+  plugins: [new StringReplacementPlugin()]
+}
 
 if (TARGET === "build" || !TARGET) {
   module.exports = [
     merge(common, {}),
     merge(common, {
       entry: "./src/atlas_main_server.js",
+      target: "node",
       output: {
         filename: "pixelsquid-atlas-server.js"
       }
